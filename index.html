@@ -85,6 +85,15 @@ tbody tr:hover { background: #fafcff; }
 .summary .tcard .row { font-size:12px; color:#555; margin-bottom:4px; }
 .summary .tcard .row .l { color:#999; display:inline-block; min-width:54px; }
 .summary .tcard .ref { margin-top:6px; font-size:11px; color:#3a7d1c; background:#eafbe0; padding:4px 8px; border-radius:6px; }
+.summary .tcard { cursor:pointer; transition:all .2s; }
+.summary .tcard:hover { border-color:#a5d68a; box-shadow:0 2px 8px rgba(82,196,26,.12); }
+.summary .tcard .tcard-head { display:flex; align-items:center; flex-wrap:wrap; gap:4px 8px; }
+.summary .tcard .tcard-head h5 { margin-bottom:0; }
+.summary .tcard .tcard-hint { font-size:11px; color:#999; margin-left:auto; }
+.summary .tcard .tcard-arrow { font-size:10px; color:#999; transition:transform .2s; }
+.summary .tcard.expanded .tcard-arrow { transform:rotate(90deg); }
+.summary .tcard .tcard-body { display:none; margin-top:10px; padding-top:10px; border-top:1px dashed #e3f0d6; }
+.summary .tcard.expanded .tcard-body { display:block; animation:fadeIn .2s ease; }
 /* 增长复盘 */
 .growth .g-note { background:#fffbe6; border:1px solid #ffe58f; border-radius:10px; padding:12px 16px; font-size:12.5px; color:#7a5b00; line-height:1.85; margin-bottom:16px; }
 .growth .g-note b { color:#ad6800; }
@@ -4440,55 +4449,68 @@ tbody tr:hover { background: #fafcff; }
     </div>
 
     <div class="hot-sub">
-      <h4>③ 爆款复刻套版（直接套用）</h4>
-      <div class="tpl-grid">
-        <div class="tcard"><h5>A. 明星 / 达人专业背书型</h5>
-          <div class="row"><span class="l">标题</span>海龟爸爸×【人物】丨【专业人设】+【核心卖点】</div>
-          <div class="row"><span class="l">封面</span>明星/达人特写 + 产品露出 + 大字卖点</div>
-          <div class="row"><span class="l">正文</span>人设场景→痛点共鸣→功效+数据/专利→话题引导</div>
-          <div class="row"><span class="l">时间</span>新品/官宣前 1-2 天、上午 10:00</div>
-          <div class="ref">参考：邓超「超」专业「超」祛痘</div></div>
-        <div class="tcard"><h5>B. 招募 / 抽奖 / 福利型</h5>
-          <div class="row"><span class="l">标题</span>@所有人 / 限时招募丨【福利】+【低门槛动作】</div>
-          <div class="row"><span class="l">封面</span>礼盒/产品堆叠图 + 大号"免费领/抽奖"</div>
-          <div class="row"><span class="l">正文</span>福利预告→参与规则(3步内)→倒计时→评论区扣数字</div>
-          <div class="row"><span class="l">时间</span>节日前 5-7 天、下午 15:00-18:00</div>
-          <div class="ref">参考：儿童节礼物派送 / 防晒体验官招募</div></div>
-        <div class="tcard"><h5>C. 节点 / 季节场景型</h5>
-          <div class="row"><span class="l">标题</span>【节日/季节】到了，【产品】+【痛点】+【指令】</div>
-          <div class="row"><span class="l">封面</span>季节元素 + 使用场景 + 宝宝/产品特写</div>
-          <div class="row"><span class="l">正文</span>场景切入→焦虑点→方案→使用前后→限定礼盒</div>
-          <div class="row"><span class="l">时间</span>节点前 1-2 周启动，每周 4-5 篇维持热度</div>
-          <div class="ref">参考：开学季装备 / 五一清爽出行 / 换季小红脸</div></div>
-        <div class="tcard"><h5>D. 线下活动 / 共创官 IP 型</h5>
-          <div class="row"><span class="l">标题</span>【IP名】丨【地点/事件】+【情绪价值词】</div>
-          <div class="row"><span class="l">封面</span>活动/风景/人物群像 + 追光/共创官 LOGO</div>
-          <div class="row"><span class="l">正文</span>故事开场→孩子视角/公益→软植入→用户共创号召</div>
-          <div class="row"><span class="l">时间</span>活动前招募、活动中日更、后 3 天复盘</div>
-          <div class="ref">参考：番茄花园一日店长 / 草原追光招募</div></div>
+      <h4>③ 爆款复刻套版（点击展开）</h4>
+      <div class="tpl-grid" id="tplGrid">
+        <div class="tcard" data-tpl="star">
+          <div class="tcard-head">
+            <h5>A. 明星 / 达人专业背书型</h5>
+            <span class="tcard-hint">点击展开内容创作模板</span>
+            <span class="tcard-arrow">▶</span>
+          </div>
+          <div class="tcard-body">
+            <div class="row"><span class="l">标题</span>海龟爸爸×【人物】丨【专业人设】+【核心卖点】</div>
+            <div class="row"><span class="l">封面</span>明星/达人特写 + 产品露出 + 大字卖点</div>
+            <div class="row"><span class="l">正文</span>人设场景→痛点共鸣→功效+数据/专利→话题引导</div>
+            <div class="row"><span class="l">时间</span>新品/官宣前 1-2 天、上午 10:00</div>
+            <div class="ref">参考：邓超「超」专业「超」祛痘</div>
+          </div>
+        </div>
+        <div class="tcard" data-tpl="gift">
+          <div class="tcard-head">
+            <h5>B. 招募 / 抽奖 / 福利型</h5>
+            <span class="tcard-hint">点击展开内容创作模板</span>
+            <span class="tcard-arrow">▶</span>
+          </div>
+          <div class="tcard-body">
+            <div class="row"><span class="l">标题</span>@所有人 / 限时招募丨【福利】+【低门槛动作】</div>
+            <div class="row"><span class="l">封面</span>礼盒/产品堆叠图 + 大号"免费领/抽奖"</div>
+            <div class="row"><span class="l">正文</span>福利预告→参与规则(3步内)→倒计时→评论区扣数字</div>
+            <div class="row"><span class="l">时间</span>节日前 5-7 天、下午 15:00-18:00</div>
+            <div class="ref">参考：儿童节礼物派送 / 防晒体验官招募</div>
+          </div>
+        </div>
+        <div class="tcard" data-tpl="season">
+          <div class="tcard-head">
+            <h5>C. 节点 / 季节场景型</h5>
+            <span class="tcard-hint">点击展开内容创作模板</span>
+            <span class="tcard-arrow">▶</span>
+          </div>
+          <div class="tcard-body">
+            <div class="row"><span class="l">标题</span>【节日/季节】到了，【产品】+【痛点】+【指令】</div>
+            <div class="row"><span class="l">封面</span>季节元素 + 使用场景 + 宝宝/产品特写</div>
+            <div class="row"><span class="l">正文</span>场景切入→焦虑点→方案→使用前后→限定礼盒</div>
+            <div class="row"><span class="l">时间</span>节点前 1-2 周启动，每周 4-5 篇维持热度</div>
+            <div class="ref">参考：开学季装备 / 五一清爽出行 / 换季小红脸</div>
+          </div>
+        </div>
+        <div class="tcard" data-tpl="offline">
+          <div class="tcard-head">
+            <h5>D. 线下活动 / 共创官 IP 型</h5>
+            <span class="tcard-hint">点击展开内容创作模板</span>
+            <span class="tcard-arrow">▶</span>
+          </div>
+          <div class="tcard-body">
+            <div class="row"><span class="l">标题</span>【IP名】丨【地点/事件】+【情绪价值词】</div>
+            <div class="row"><span class="l">封面</span>活动/风景/人物群像 + 追光/共创官 LOGO</div>
+            <div class="row"><span class="l">正文</span>故事开场→孩子视角/公益→软植入→用户共创号召</div>
+            <div class="row"><span class="l">时间</span>活动前招募、活动中日更、后 3 天复盘</div>
+            <div class="ref">参考：番茄花园一日店长 / 草原追光招募</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="sum-block bad">
-    <h3>⚠️ 需要优化的地方</h3>
-    <ol>
-      <li><b>月度发布节奏波动大。</b>2026-02 月仅 9 篇，而 2026-08 月 60 篇，相差近 3 倍。建议锚定稳定周更节奏（如每周 4–5 篇），避免内容空窗导致算法权重流失。</li>
-      <li><b>产品营销类互动偏弱。</b>「产品营销」84 篇，但单篇平均阅读 1,532、平均互动 131，显著低于头部类别；纯产品推文易被算法压低。建议采用「产品 + 场景 / 共创官 / 科研背书」软植入，而非硬广口吻。</li>
-      <li><b>Hi 科研 / 科学答案栏目声量偏低。</b>「Hi科研前线」15 篇、「Hi科学答案」7 篇，合计仅 22 篇且平均阅读不高。作为品牌「专业功效」护城河，需加强内容形式（专家出镜、实验可视化、短视频拆解），提升可读性与收藏价值。</li>
-      <li><b>评论互动率待提升。</b>整体互动率 7.67%，其中「评论」占比最低。建议在正文增设互动钩子（提问、投票、共创官征集、晒娃活动），主动引导评论，拉升算法推荐权重。</li>
-      <li><b>投流效率尚未量化。</b>目前后台投流数据尚未接入（聚光/薯条后台需独立登录，自动化暂未抓取）。建议导出投流报表，补充「单篇投放金额」后评估投产比，把预算向高转化笔记倾斜。</li>
-    </ol>
-  </div>
-
-  <div class="sum-block tip">
-    <h3>💡 下一步建议</h3>
-    <ul>
-      <li>建立「爆款选题库」：把邓超联动、草原追光等高互动内容拆解为可复用的选题模板，批量复制成功要素。</li>
-      <li>用投流放大确定性：拿到投流报表后，优先对互动率高的自然流量笔记加投，而非盲目铺量，提升 ROI。</li>
-      <li>稳定节奏 + 栏目化：固定 Hi 三栏的更新日历，让用户形成追更心智；用共创官 UGC 反哺内容产能。</li>
-    </ul>
-  </div>
 </div>
 </div>
 <div id="tab-growth" class="tab-panel">
@@ -4640,6 +4662,15 @@ tabBtns.forEach(btn => {
     btn.classList.add('active');
     const target = btn.dataset.tab;
     tabPanels.forEach(p => p.classList.toggle('active', p.id === target));
+  });
+});
+
+// 爆款复刻套版：点击卡片展开/收起内容创作模板
+document.querySelectorAll('#tplGrid .tcard').forEach(card => {
+  card.addEventListener('click', () => {
+    const isExpanded = card.classList.contains('expanded');
+    document.querySelectorAll('#tplGrid .tcard').forEach(c => c.classList.remove('expanded'));
+    if (!isExpanded) card.classList.add('expanded');
   });
 });
 </script></body></html>
