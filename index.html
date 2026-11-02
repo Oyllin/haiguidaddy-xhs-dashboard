@@ -119,6 +119,10 @@ tbody tr:hover { background: #fafcff; }
 .growth .mbar-inline { display:flex; align-items:center; width:240px; background:#f0f0f0; border-radius:6px; height:14px; overflow:hidden; }
 .growth .mfill-inline { background:linear-gradient(90deg,#fa8c16,#722ED1); height:100%; border-radius:6px; min-width:2px; }
 .tabs { display:flex; gap:8px; margin:18px 0 6px; border-bottom:2px solid #e8e8e8; padding-bottom:0; }
+.oct-link { flex:none; white-space:nowrap; margin-left:auto; align-self:center; margin-bottom:4px;
+  background:#1677FF; color:#fff !important; text-decoration:none; border-radius:8px;
+  padding:8px 14px; font-size:13px; font-weight:600; box-shadow:0 2px 6px rgba(22,119,255,.25); }
+.oct-link:hover { background:#0958d9; }
 .tab-btn { padding:10px 20px; background:#f5f5f5; border:none; border-radius:8px 8px 0 0; cursor:pointer; font-size:14px; color:#555; font-weight:500; transition:all .2s; border-bottom:2px solid transparent; margin-bottom:-2px; }
 .tab-btn:hover { background:#e6f7ff; color:#1677FF; }
 .tab-btn.active { background:#fff; color:#1677FF; border-bottom:2px solid #1677FF; font-weight:600; }
@@ -131,7 +135,7 @@ tbody tr:hover { background: #fafcff; }
 <div class="tabs">
   <button class="tab-btn active" data-tab="tab-data">📊 2026年1–10月数据</button>
   <button class="tab-btn" data-tab="tab-growth">📈 运营能力升级复盘</button>
-  <a class="tab-btn" href="oct_review.html" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px;margin-left:auto;background:#1677FF;color:#fff;border-bottom:2px solid #1677FF">📄 10 月内容复盘 →</a>
+  <a class="oct-link" href="https://oyllin.github.io/haiguidaddy-xhs-dashboard/oct_review.html">📄 10 月内容复盘 →</a>
 </div>
 <div id="tab-data" class="tab-panel active">
 <div class="cards">
@@ -5348,6 +5352,7 @@ const tabBtns = document.querySelectorAll('.tab-btn');
 const tabPanels = document.querySelectorAll('.tab-panel');
 tabBtns.forEach(btn => {
   btn.addEventListener('click', () => {
+    if (!btn.dataset.tab) return;
     tabBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     const target = btn.dataset.tab;
