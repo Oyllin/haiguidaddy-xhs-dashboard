@@ -119,23 +119,31 @@ tbody tr:hover { background: #fafcff; }
 .growth .mbar-inline { display:flex; align-items:center; width:240px; background:#f0f0f0; border-radius:6px; height:14px; overflow:hidden; }
 .growth .mfill-inline { background:linear-gradient(90deg,#fa8c16,#722ED1); height:100%; border-radius:6px; min-width:2px; }
 .tabs { display:flex; gap:8px; margin:18px 0 6px; border-bottom:2px solid #e8e8e8; padding-bottom:0; }
-.oct-link { flex:none; white-space:nowrap; margin-left:auto; align-self:center; margin-bottom:4px;
-  background:#1677FF; color:#fff !important; text-decoration:none; border-radius:8px;
-  padding:8px 14px; font-size:13px; font-weight:600; box-shadow:0 2px 6px rgba(22,119,255,.25); }
-.oct-link:hover { background:#0958d9; }
 .tab-btn { padding:10px 20px; background:#f5f5f5; border:none; border-radius:8px 8px 0 0; cursor:pointer; font-size:14px; color:#555; font-weight:500; transition:all .2s; border-bottom:2px solid transparent; margin-bottom:-2px; }
 .tab-btn:hover { background:#e6f7ff; color:#1677FF; }
 .tab-btn.active { background:#fff; color:#1677FF; border-bottom:2px solid #1677FF; font-weight:600; }
 .tab-panel { display:none; animation:fadeIn .25s ease; }
 .tab-panel.active { display:block; }
 @keyframes fadeIn { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:translateY(0); } }
+
+/* ---- 10 月复盘 Tab ---- */
+#tab-oct .card .d { font-size:11px; color:#a0a4ad; margin-top:4px; }
+#tab-oct h3 { font-size:14px; margin:16px 0 8px; }
+#tab-oct .two { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+#tab-oct .find { background:#F7FAFF; border-left:3px solid #1677FF; border-radius:0 8px 8px 0; padding:10px 14px; margin:8px 0; font-size:13px; color:#3d4451; }
+#tab-oct .do { background:#F6FFED; border-left:3px solid #52C41A; border-radius:0 8px 8px 0; padding:10px 14px; margin:8px 0; font-size:13px; color:#2f4a1f; }
+#tab-oct .warn { background:#FFF7E6; border-left:3px solid #FA8C16; border-radius:0 8px 8px 0; padding:10px 14px; margin:8px 0; font-size:13px; color:#5c3b00; }
+#tab-oct .mbar { display:block; height:6px; background:#eef1f6; border-radius:3px; overflow:hidden; }
+#tab-oct .mfill { display:block; height:100%; background:linear-gradient(90deg,#1677FF,#69b1ff); border-radius:3px; }
+#tab-oct .foot { color:#a0a4ad; font-size:11.5px; margin-top:8px; }
+@media (max-width:900px) { #tab-oct .two { grid-template-columns:1fr; } }
 </style></head><body><div class="wrap">
 <h1>海龟爸爸 · 小红书 2026年1–10月 笔记数据看板</h1>
 <div class="sub">数据来源：海龟爸爸创作者后台「笔记管理」+「数据看板 → 内容分析」导出（1–10月 共 284 篇，分类依据 = 标题 + 正文 + 话题）· 更新于 2026-11-02</div>
 <div class="tabs">
   <button class="tab-btn active" data-tab="tab-data">📊 2026年1–10月数据</button>
+  <button class="tab-btn" data-tab="tab-oct">🗓 10月运营复盘</button>
   <button class="tab-btn" data-tab="tab-growth">📈 运营能力升级复盘</button>
-  <a class="oct-link" href="https://oyllin.github.io/haiguidaddy-xhs-dashboard/oct_review.html">📄 10 月内容复盘 →</a>
 </div>
 <div id="tab-data" class="tab-panel active">
 <div class="cards">
@@ -5136,6 +5144,286 @@ tbody tr:hover { background: #fafcff; }
   </div>
 
 </div>
+</div>
+<div id="tab-oct" class="tab-panel">
+
+<div class="cards">
+  <div class="card"><div class="k">笔记数</div><div class="v">27</div><div class="d">图文 16 · 视频 11</div></div>
+  <div class="card"><div class="k">总曝光</div><div class="v">89,144</div><div class="d">篇均 3,302</div></div>
+  <div class="card"><div class="k">总阅读</div><div class="v">14,248</div><div class="d">篇均 528</div></div>
+  <div class="card"><div class="k">总互动</div><div class="v">826</div><div class="d">赞 496 · 评 137 · 藏 151 · 享 42</div></div>
+  <div class="card"><div class="k">互动率</div><div class="v">5.80%</div><div class="d">（赞+评+藏+享）÷ 阅读</div></div>
+  <div class="card"><div class="k">净增粉</div><div class="v">44</div><div class="d">内容直接贡献</div></div>
+</div>
+
+<div class="section">
+  <h2>一、和 9 月比：产能持平，曝光下滑</h2>
+  <table><thead><tr><th>指标</th><th class="num">9 月</th><th class="num">10 月</th><th class="num">变化</th><th>判断</th></tr></thead><tbody>
+    <tr><td>笔记数</td><td class="num">24</td><td class="num">27</td><td class="num">+3</td><td>产能没掉，日更稳定在 0.87 篇/天</td></tr>
+    <tr><td>总曝光</td><td class="num">161,641</td><td class="num">89,144</td><td class="num">-44.9%</td><td><b>最大问题</b>：曝光掉了三成半</td></tr>
+    <tr><td>总阅读</td><td class="num">16,563</td><td class="num">14,248</td><td class="num">-14.0%</td><td>基本持平，阅读掉得比曝光少</td></tr>
+    <tr><td>篇均阅读</td><td class="num">690</td><td class="num">528</td><td class="num">-23.5%</td><td>单篇效率下降</td></tr>
+    <tr><td>互动率</td><td class="num">8.65%</td><td class="num">5.80%</td><td class="num">-2.85 pt</td><td>互动质量略降，仍在健康区间</td></tr>
+    <tr><td>净增粉</td><td class="num">57</td><td class="num">44</td><td class="num">-23%</td><td>涨粉效率同步下滑</td></tr>
+  </tbody></table>
+  <div class="warn">曝光下滑的直接原因：本月 14 篇（51.85%）是路演/线下引流内容，篇均曝光只有 2,012；而 9 月主力是共创官与品牌向内容，单篇分发量级更高。不是账号权重掉了，是内容结构变了。</div>
+</div>
+
+<div class="section">
+  <h2>二、四条内容线的产出效率</h2>
+  <table><thead><tr><th>内容线</th><th class="num">篇数</th><th class="num">曝光</th><th class="num">阅读</th><th class="num">篇均曝光</th><th class="num">篇均阅读</th><th class="num">互动率</th><th class="num">涨粉</th><th class="num">阅读占比</th></tr></thead><tbody>
+  <tr>
+    <td><b>共创官内容</b></td><td class="num">5</td><td class="num">22,891</td><td class="num">6,234</td>
+    <td class="num">4,578</td><td class="num">1,247</td>
+    <td class="num">2.63%</td><td class="num">5</td><td class="num">43.75%</td></tr><tr>
+    <td><b>产品与达人</b></td><td class="num">5</td><td class="num">30,240</td><td class="num">4,693</td>
+    <td class="num">6,048</td><td class="num">939</td>
+    <td class="num">9.46%</td><td class="num">23</td><td class="num">32.94%</td></tr><tr>
+    <td><b>路演 / 线下引流</b></td><td class="num">14</td><td class="num">28,163</td><td class="num">2,612</td>
+    <td class="num">2,012</td><td class="num">187</td>
+    <td class="num">7.16%</td><td class="num">16</td><td class="num">18.33%</td></tr><tr>
+    <td><b>科研 / 高光</b></td><td class="num">3</td><td class="num">7,850</td><td class="num">709</td>
+    <td class="num">2,617</td><td class="num">236</td>
+    <td class="num">4.37%</td><td class="num">0</td><td class="num">4.98%</td></tr>
+  </tbody></table>
+  <div class="find">读这张表只需看两组数：<b>篇均阅读</b>与<b>互动率</b>。产品与达人线 5 篇拿下 4,693 阅读（占 32.94%）、互动率 9.46%；共创官 5 篇阅读最多（6,234）但互动率只有 2.63%；路演线 14 篇只换来 2,612 阅读，篇均 187。</div>
+</div>
+
+<div class="section">
+  <h2>三、发布节奏与结构</h2>
+  <div class="two">
+    <div>
+      <h3>周节奏</h3>
+      <table><thead><tr><th>周</th><th>日期</th><th class="num">篇数</th><th class="num">阅读</th><th></th></tr></thead><tbody>
+      <tr><td>W1</td><td>10.09 – 10.10</td><td class="num">2</td><td class="num">3,388</td><td style="width:90px"><div class="mbar"><div class="mfill" style="width:66%"></div></div></td></tr><tr><td>W2</td><td>10.13 – 10.17</td><td class="num">5</td><td class="num">4,183</td><td style="width:90px"><div class="mbar"><div class="mfill" style="width:82%"></div></div></td></tr><tr><td>W3</td><td>10.19 – 10.25</td><td class="num">12</td><td class="num">5,095</td><td style="width:90px"><div class="mbar"><div class="mfill" style="width:100%"></div></div></td></tr><tr><td>W4</td><td>10.26 – 10.31</td><td class="num">8</td><td class="num">1,582</td><td style="width:90px"><div class="mbar"><div class="mfill" style="width:31%"></div></div></td></tr>
+      </tbody></table>
+      <div class="foot">10.19–10.25 是本月峰值周（12 篇、5,095 阅读），靠的是路演预热集中投放 + 「好朋友从Hi开始」单篇爆发。</div>
+    </div>
+    <div>
+      <h3>体裁效率</h3>
+      <table><thead><tr><th>体裁</th><th class="num">篇数</th><th class="num">篇均曝光</th><th class="num">篇均阅读</th><th class="num">篇均CTR</th><th class="num">互动率</th></tr></thead><tbody>
+      <tr><td><b>图文</b></td><td class="num">16</td><td class="num">2,400</td><td class="num">178</td><td class="num">5.97%</td><td class="num">9.25%</td></tr><tr><td><b>视频</b></td><td class="num">11</td><td class="num">4,613</td><td class="num">1,037</td><td class="num">5.55%</td><td class="num">4.94%</td></tr>
+      </tbody></table>
+      <div class="foot">视频篇均阅读是图文的 5.8 倍，但互动率只有图文的 1.9 分之一——视频负责「被看到」，图文负责「被收藏」。</div>
+    </div>
+  </div>
+
+  <h3>分类分布</h3>
+  <table><thead><tr><th>分类</th><th class="num">篇数</th><th class="num">曝光</th><th class="num">阅读</th><th class="num">篇均阅读</th><th class="num">互动率</th><th>阅读贡献</th></tr></thead><tbody>
+  <tr>
+    <td><span class="cat" style="background:#722ED1">共创官系列</span></td>
+    <td class="num">5</td><td class="num">22,891</td><td class="num">6,234</td>
+    <td class="num">1,247</td><td class="num">2.63%</td>
+    <td style="width:160px"><div class="mbar"><div class="mfill" style="width:100%"></div></div></td></tr><tr>
+    <td><span class="cat" style="background:#1677FF">产品/代言营销栏目</span></td>
+    <td class="num">5</td><td class="num">30,240</td><td class="num">4,693</td>
+    <td class="num">939</td><td class="num">9.46%</td>
+    <td style="width:160px"><div class="mbar"><div class="mfill" style="width:75%"></div></div></td></tr><tr>
+    <td><span class="cat" style="background:#FA8C16">线下活动</span></td>
+    <td class="num">14</td><td class="num">28,163</td><td class="num">2,612</td>
+    <td class="num">187</td><td class="num">7.16%</td>
+    <td style="width:160px"><div class="mbar"><div class="mfill" style="width:42%"></div></div></td></tr><tr>
+    <td><span class="cat" style="background:#F759AB">Hi高光时刻</span></td>
+    <td class="num">1</td><td class="num">3,592</td><td class="num">447</td>
+    <td class="num">447</td><td class="num">3.80%</td>
+    <td style="width:160px"><div class="mbar"><div class="mfill" style="width:7%"></div></div></td></tr><tr>
+    <td><span class="cat" style="background:#13C2C2">Hi科研前线</span></td>
+    <td class="num">2</td><td class="num">4,258</td><td class="num">262</td>
+    <td class="num">131</td><td class="num">5.34%</td>
+    <td style="width:160px"><div class="mbar"><div class="mfill" style="width:4%"></div></div></td></tr>
+  </tbody></table>
+</div>
+
+<div class="section">
+  <h2>四、内容复盘</h2>
+  <h3>① 阅读 Top5</h3>
+  <table><thead><tr><th>#</th><th>标题</th><th>类型</th><th class="num">阅读</th><th class="num">曝光</th><th class="num">CTR</th><th class="num">互动率</th></tr></thead><tbody>
+  <tr><td>1</td><td><b>好朋友 从“Hi”开始</b></td><td>视频</td><td class="num">3,583</td><td class="num">6,850</td><td class="num">5.90%</td><td class="num">1.20%</td></tr><tr><td>2</td><td><b>🌍沐言同款｜解锁旅行肌肤守护对策✅</b></td><td>视频</td><td class="num">2,941</td><td class="num">19,065</td><td class="num">8.10%</td><td class="num">9.32%</td></tr><tr><td>3</td><td><b>超级共创官第一期 ｜ 听听大小朋友怎么说？</b></td><td>视频</td><td class="num">1,839</td><td class="num">4,090</td><td class="num">6.30%</td><td class="num">1.69%</td></tr><tr><td>4</td><td><b>蛋糕虽不完美 但爱一直都在</b></td><td>视频</td><td class="num">899</td><td class="num">3,839</td><td class="num">7.40%</td><td class="num">9.12%</td></tr><tr><td>5</td><td><b>海龟爸爸暖冬修红路演|三甲专家医生义诊</b></td><td>图文</td><td class="num">792</td><td class="num">2,744</td><td class="num">10.50%</td><td class="num">9.72%</td></tr>
+  </tbody></table>
+
+  <h3>② 互动率 Top5（阅读 ≥100）</h3>
+  <table><thead><tr><th>#</th><th>标题</th><th>类型</th><th class="num">阅读</th><th class="num">互动</th><th class="num">互动率</th></tr></thead><tbody>
+  <tr><td>1</td><td><b>紧急任务续集！王牌特工档案库正式开启</b></td><td>图文</td><td class="num">165</td><td class="num">35</td><td class="num">21.21%</td></tr><tr><td>2</td><td><b>1.2m品牌共创官的奇思妙想</b></td><td>图文</td><td class="num">238</td><td class="num">46</td><td class="num">19.33%</td></tr><tr><td>3</td><td><b>祛痘已严肃进入大飞行时代</b></td><td>视频</td><td class="num">551</td><td class="num">68</td><td class="num">12.34%</td></tr><tr><td>4</td><td><b>✨海龟爸爸追光共创营·第十期招募开启✨</b></td><td>图文</td><td class="num">322</td><td class="num">37</td><td class="num">11.49%</td></tr><tr><td>5</td><td><b>海龟爸爸暖冬修红路演|三甲专家医生义诊</b></td><td>图文</td><td class="num">792</td><td class="num">77</td><td class="num">9.72%</td></tr>
+  </tbody></table>
+
+  <h3>③ 跑不动的（曝光 &lt; 1,600）</h3>
+  <table><thead><tr><th>日期</th><th>标题</th><th class="num">曝光</th><th class="num">阅读</th><th class="num">CTR</th></tr></thead><tbody>
+  <tr><td>10-29</td><td>#蓝胖子修红护理站倒计时 1️⃣ 天！</td><td class="num">993</td><td class="num">48</td><td class="num">4.50%</td></tr><tr><td>10-31</td><td>🤫祛痘不烧心档案正式揭秘！</td><td class="num">1,389</td><td class="num">141</td><td class="num">9.20%</td></tr><tr><td>10-26</td><td>昆明宝妈集合！蓝胖子修红护理站到家门口了</td><td class="num">1,539</td><td class="num">73</td><td class="num">4.80%</td></tr><tr><td>10-29</td><td>🚙海龟爸爸×登康贝比巡游车出发！</td><td class="num">1,542</td><td class="num">274</td><td class="num">4.70%</td></tr><tr><td>10-20</td><td>⏳海龟爸爸修红路演倒计时 3️⃣ 天！</td><td class="num">1,566</td><td class="num">76</td><td class="num">5.20%</td></tr>
+  </tbody></table>
+
+  <h3>④ 五条结论</h3>
+  <div class="find"><b>1. 本月是「活动月」，不是「内容月」。</b>14 篇路演/线下引流内容占了 51.85% 的产量，只贡献 18.33% 的阅读。这类内容的价值在线下到店与搜索承接，用它拉线上声量本身就是错配。</div>
+  <div class="find"><b>2. 倒计时是最低效的写法。</b>4 条倒计时篇均曝光 1,599、篇均阅读 80；同属路演线但带明确利益的（义诊 / 派样 / 巡游车 / 护理站）10 篇，篇均曝光 2,177、篇均阅读 229、互动率 7.38%。同样的活动，说「还剩几天」没人点，说「免费义诊+领小样」才有人点。</div>
+  <div class="find"><b>3. 「祛痘」是本月效率最高的话题。</b>10/28 视频 4,327 曝光 / 551 阅读 / 互动率 12.3%，10/31 图文 1,389 曝光 / 141 阅读 / 9.2% CTR，两条都远高于月均。反观「成分/IFSCC」两条图文合计 7,850 曝光、阅读 709——同一个月内，语言越口语、越靠近「孩子的具体问题」，数据越好。</div>
+  <div class="find"><b>4. 共创官内容「看得多、聊得少」。</b>5 篇拿下 43.75% 的阅读，互动率只有 2.63%（全月 5.80%）。「好朋友 从Hi开始」3,583 阅读只换来 1.2% 互动——内容被算法推了，但没有唤起行动。</div>
+  <div class="find"><b>5. 视频拿量、图文拿心。</b>视频篇均阅读 1,037，图文 178；但互动率图文 9.25%、视频 4.94%。传播用视频、沉淀用图文，别指望一条内容两头都占。</div>
+</div>
+
+<div class="section">
+  <h2>五、下一步怎么做（11 月）</h2>
+
+  <h3>1. 内容配比先调回来</h3>
+  <table><thead><tr><th>内容线</th><th class="num">10 月实际</th><th class="num">11 月建议</th><th>理由</th></tr></thead><tbody>
+    <tr><td>路演 / 线下引流</td><td class="num">14 篇（51.85%）</td><td class="num">≤ 8 篇（≤30%）</td><td>线下活动 11 月减少，靠「给什么」的 1-2 条打透即可</td></tr>
+    <tr><td>产品与达人</td><td class="num">5 篇（18.52%）</td><td class="num">9-10 篇（35%）</td><td>本月效率最高（互动率 9.46%），双 11 主力</td></tr>
+    <tr><td>共创官内容</td><td class="num">5 篇（18.52%）</td><td class="num">6-7 篇（25%）</td><td>保定观看基本盘，但必须补互动钩子</td></tr>
+    <tr><td>科研 / 高光</td><td class="num">3 篇（11.11%）</td><td class="num">2-3 篇（10%）</td><td>改成视频 + 人话标题，别再发纯图解</td></tr>
+  </tbody></table>
+
+  <div class="do"><b>动作 1 · 路演只剩一条写法：给什么。</b>11 月如果还有线下活动，预告统一写「时间 + 地点 + 免费领什么」，倒计时最多 1 条；把省下的产量挪给产品线。</div>
+  <div class="do"><b>动作 2 · 把「祛痘」做成固定栏目。</b>本月验证了祛痘话题的互动率是月均的 2 倍以上（12.3% vs 5.80%）。11 月固定 3 条：成分怎么起效 / 真人 7 天记录 / 医生一句话，全部用口语化标题（「祛痘不烧心」这种表达就对了）。</div>
+  <div class="do"><b>动作 3 · 共创官每条都埋一个动作。</b>视频结尾固定一句提问（「你家孩子最爱哪个环节？」），图文固定一个二选一投票。目标：共创官线互动率从 2.63% 提到 4% 以上。</div>
+  <div class="do"><b>动作 4 · 科研线彻底视频化 + 人话标题。</b>把「超分子积雪草」改成「孩子脸一红就涂，为什么医生推荐这个」，封面用真人或前后对比。低于 3,000 曝光的纯科普图解不再单独发，合并进视频里讲。</div>
+  <div class="do"><b>动作 5 · 双 11 按三段铺。</b>11/1–11/7 蓄水（痛点科普 + 达人种草，先不讲价）、11/8–11/11 爆发（利益点 + 限时机制，每天 1 条）、11/12–11/15 返场（真实晒单 + 复盘）。爆发期不要发品牌理念类内容，会稀释转化。</div>
+  <div class="do"><b>动作 6 · 定三个可验收的数。</b>① 篇均阅读 528 → 650；② 互动率 5.80% → 6.5%；③ 活动向内容占比 51.85% → 30% 以内。月底用同一套导出对一次。</div>
+
+  <div class="warn">风险提示：11 月如果继续按 10 月的活动向节奏走，曝光大概率还在 8-9 万区间；要回到 9 月的 13 万量级，靠的是产品线 + 达人二创的产量，而不是多发几条倒计时。</div>
+</div>
+
+<div class="section">
+  <h2>六、10 月笔记明细（27 篇）</h2>
+  <table><thead><tr><th>日期</th><th>标题</th><th>体裁</th><th>分类</th><th class="num">曝光</th><th class="num">阅读</th><th class="num">CTR</th><th class="num">赞</th><th class="num">评</th><th class="num">藏</th><th class="num">享</th><th class="num">互动率</th></tr></thead><tbody>
+  <tr>
+    <td>10-31</td><td>🤫祛痘不烧心档案正式揭秘！</td><td>图文</td>
+    <td><span class="cat" style="background:#1677FF">产品/代言营销栏目</span></td>
+    <td class="num">1,389</td><td class="num">141</td><td class="num">9.20%</td>
+    <td class="num">5</td><td class="num">1</td><td class="num">2</td><td class="num">1</td>
+    <td class="num">6.38%</td></tr><tr>
+    <td>10-29</td><td>🚙海龟爸爸×登康贝比巡游车出发！</td><td>视频</td>
+    <td><span class="cat" style="background:#FA8C16">线下活动</span></td>
+    <td class="num">1,542</td><td class="num">274</td><td class="num">4.70%</td>
+    <td class="num">15</td><td class="num">1</td><td class="num">0</td><td class="num">1</td>
+    <td class="num">6.20%</td></tr><tr>
+    <td>10-29</td><td>#蓝胖子修红护理站倒计时 1️⃣ 天！</td><td>图文</td>
+    <td><span class="cat" style="background:#FA8C16">线下活动</span></td>
+    <td class="num">993</td><td class="num">48</td><td class="num">4.50%</td>
+    <td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td>
+    <td class="num">8.33%</td></tr><tr>
+    <td>10-28</td><td>祛痘已严肃进入大飞行时代</td><td>视频</td>
+    <td><span class="cat" style="background:#1677FF">产品/代言营销栏目</span></td>
+    <td class="num">4,327</td><td class="num">551</td><td class="num">7.60%</td>
+    <td class="num">32</td><td class="num">17</td><td class="num">15</td><td class="num">4</td>
+    <td class="num">12.34%</td></tr><tr>
+    <td>10-27</td><td>✨宝宝秋冬红脸不用愁！</td><td>视频</td>
+    <td><span class="cat" style="background:#1677FF">产品/代言营销栏目</span></td>
+    <td class="num">1,620</td><td class="num">161</td><td class="num">4.60%</td>
+    <td class="num">5</td><td class="num">5</td><td class="num">1</td><td class="num">0</td>
+    <td class="num">6.83%</td></tr><tr>
+    <td>10-26</td><td>蓝胖子巡游车昆明全城免费派样</td><td>图文</td>
+    <td><span class="cat" style="background:#FA8C16">线下活动</span></td>
+    <td class="num">1,701</td><td class="num">82</td><td class="num">5.00%</td>
+    <td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num">0</td>
+    <td class="num">3.66%</td></tr><tr>
+    <td>10-26</td><td>海龟爸爸共创官｜1.2m野生导演Vlog</td><td>视频</td>
+    <td><span class="cat" style="background:#722ED1">共创官系列</span></td>
+    <td class="num">1,928</td><td class="num">252</td><td class="num">3.40%</td>
+    <td class="num">5</td><td class="num">2</td><td class="num">0</td><td class="num">0</td>
+    <td class="num">2.78%</td></tr><tr>
+    <td>10-26</td><td>昆明宝妈集合！蓝胖子修红护理站到家门口了</td><td>图文</td>
+    <td><span class="cat" style="background:#FA8C16">线下活动</span></td>
+    <td class="num">1,539</td><td class="num">73</td><td class="num">4.80%</td>
+    <td class="num">4</td><td class="num">2</td><td class="num">1</td><td class="num">0</td>
+    <td class="num">9.59%</td></tr><tr>
+    <td>10-25</td><td>蛋糕虽不完美 但爱一直都在</td><td>视频</td>
+    <td><span class="cat" style="background:#1677FF">产品/代言营销栏目</span></td>
+    <td class="num">3,839</td><td class="num">899</td><td class="num">7.40%</td>
+    <td class="num">46</td><td class="num">4</td><td class="num">32</td><td class="num">0</td>
+    <td class="num">9.12%</td></tr><tr>
+    <td>10-24</td><td>祛痘不刷酸？看入选IFSCC的超分子技术</td><td>图文</td>
+    <td><span class="cat" style="background:#13C2C2">Hi科研前线</span></td>
+    <td class="num">2,084</td><td class="num">149</td><td class="num">7.20%</td>
+    <td class="num">6</td><td class="num">2</td><td class="num">0</td><td class="num">0</td>
+    <td class="num">5.37%</td></tr><tr>
+    <td>10-24</td><td>🎬海龟爸爸蓝胖子路演首日回顾来啦</td><td>视频</td>
+    <td><span class="cat" style="background:#FA8C16">线下活动</span></td>
+    <td class="num">2,021</td><td class="num">259</td><td class="num">3.40%</td>
+    <td class="num">5</td><td class="num">1</td><td class="num">2</td><td class="num">1</td>
+    <td class="num">3.47%</td></tr><tr>
+    <td>10-23</td><td>1.2m品牌共创官的奇思妙想</td><td>图文</td>
+    <td><span class="cat" style="background:#722ED1">共创官系列</span></td>
+    <td class="num">4,545</td><td class="num">238</td><td class="num">5.40%</td>
+    <td class="num">17</td><td class="num">15</td><td class="num">11</td><td class="num">3</td>
+    <td class="num">19.33%</td></tr><tr>
+    <td>10-22</td><td>✨海龟爸爸追光共创营·第十期招募开启✨</td><td>图文</td>
+    <td><span class="cat" style="background:#722ED1">共创官系列</span></td>
+    <td class="num">5,478</td><td class="num">322</td><td class="num">5.60%</td>
+    <td class="num">12</td><td class="num">17</td><td class="num">3</td><td class="num">5</td>
+    <td class="num">11.49%</td></tr><tr>
+    <td>10-22</td><td>⏳海龟爸爸修护路演倒计时 1 天！</td><td>图文</td>
+    <td><span class="cat" style="background:#FA8C16">线下活动</span></td>
+    <td class="num">1,899</td><td class="num">102</td><td class="num">5.30%</td>
+    <td class="num">3</td><td class="num">3</td><td class="num">1</td><td class="num">0</td>
+    <td class="num">6.86%</td></tr><tr>
+    <td>10-21</td><td>限时4天！三甲医生免费义诊+领取蓝胖子小样</td><td>视频</td>
+    <td><span class="cat" style="background:#FA8C16">线下活动</span></td>
+    <td class="num">1,865</td><td class="num">198</td><td class="num">3.90%</td>
+    <td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td>
+    <td class="num">2.02%</td></tr><tr>
+    <td>10-21</td><td>海龟爸爸修红路演倒计时 2️⃣ 天！</td><td>图文</td>
+    <td><span class="cat" style="background:#FA8C16">线下活动</span></td>
+    <td class="num">1,938</td><td class="num">95</td><td class="num">4.70%</td>
+    <td class="num">3</td><td class="num">3</td><td class="num">0</td><td class="num">0</td>
+    <td class="num">6.32%</td></tr><tr>
+    <td>10-20</td><td>超级共创官第一期 ｜ 听听大小朋友怎么说？</td><td>视频</td>
+    <td><span class="cat" style="background:#722ED1">共创官系列</span></td>
+    <td class="num">4,090</td><td class="num">1,839</td><td class="num">6.30%</td>
+    <td class="num">19</td><td class="num">7</td><td class="num">3</td><td class="num">2</td>
+    <td class="num">1.69%</td></tr><tr>
+    <td>10-20</td><td>海龟爸爸蓝胖子修红巡游车来啦！</td><td>图文</td>
+    <td><span class="cat" style="background:#FA8C16">线下活动</span></td>
+    <td class="num">1,888</td><td class="num">126</td><td class="num">6.60%</td>
+    <td class="num">5</td><td class="num">1</td><td class="num">1</td><td class="num">0</td>
+    <td class="num">5.56%</td></tr><tr>
+    <td>10-20</td><td>⏳海龟爸爸修红路演倒计时 3️⃣ 天！</td><td>图文</td>
+    <td><span class="cat" style="background:#FA8C16">线下活动</span></td>
+    <td class="num">1,566</td><td class="num">76</td><td class="num">5.20%</td>
+    <td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td>
+    <td class="num">1.32%</td></tr><tr>
+    <td>10-19</td><td>海龟爸爸暖冬修红路演|三甲专家医生义诊</td><td>图文</td>
+    <td><span class="cat" style="background:#FA8C16">线下活动</span></td>
+    <td class="num">2,744</td><td class="num">792</td><td class="num">10.50%</td>
+    <td class="num">26</td><td class="num">22</td><td class="num">13</td><td class="num">16</td>
+    <td class="num">9.72%</td></tr><tr>
+    <td>10-17</td><td>连续2年登上国际舞台，韧肤因Pro厉害在哪？</td><td>图文</td>
+    <td><span class="cat" style="background:#13C2C2">Hi科研前线</span></td>
+    <td class="num">2,174</td><td class="num">113</td><td class="num">4.80%</td>
+    <td class="num">5</td><td class="num">0</td><td class="num">1</td><td class="num">0</td>
+    <td class="num">5.31%</td></tr><tr>
+    <td>10-15</td><td>官宣！蓝胖子敏宝护脸特工，正式报到💙</td><td>图文</td>
+    <td><span class="cat" style="background:#FA8C16">线下活动</span></td>
+    <td class="num">2,858</td><td class="num">165</td><td class="num">5.70%</td>
+    <td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">1</td>
+    <td class="num">3.03%</td></tr><tr>
+    <td>10-14</td><td>好朋友 从“Hi”开始</td><td>视频</td>
+    <td><span class="cat" style="background:#722ED1">共创官系列</span></td>
+    <td class="num">6,850</td><td class="num">3,583</td><td class="num">5.90%</td>
+    <td class="num">32</td><td class="num">3</td><td class="num">6</td><td class="num">2</td>
+    <td class="num">1.20%</td></tr><tr>
+    <td>10-14</td><td>紧急任务续集！王牌特工档案库正式开启</td><td>图文</td>
+    <td><span class="cat" style="background:#FA8C16">线下活动</span></td>
+    <td class="num">2,919</td><td class="num">165</td><td class="num">5.20%</td>
+    <td class="num">11</td><td class="num">21</td><td class="num">3</td><td class="num">0</td>
+    <td class="num">21.21%</td></tr><tr>
+    <td>10-13</td><td>🚨紧急任务！寻找敏宝星「王牌特工」🔎</td><td>图文</td>
+    <td><span class="cat" style="background:#FA8C16">线下活动</span></td>
+    <td class="num">2,690</td><td class="num">157</td><td class="num">5.80%</td>
+    <td class="num">2</td><td class="num">3</td><td class="num">0</td><td class="num">0</td>
+    <td class="num">3.18%</td></tr><tr>
+    <td>10-10</td><td>持续深耕少儿护肤！回顾海龟爸爸IFSCC之行</td><td>视频</td>
+    <td><span class="cat" style="background:#F759AB">Hi高光时刻</span></td>
+    <td class="num">3,592</td><td class="num">447</td><td class="num">5.80%</td>
+    <td class="num">8</td><td class="num">4</td><td class="num">2</td><td class="num">3</td>
+    <td class="num">3.80%</td></tr><tr>
+    <td>10-09</td><td>🌍沐言同款｜解锁旅行肌肤守护对策✅</td><td>视频</td>
+    <td><span class="cat" style="background:#1677FF">产品/代言营销栏目</span></td>
+    <td class="num">19,065</td><td class="num">2,941</td><td class="num">8.10%</td>
+    <td class="num">215</td><td class="num">2</td><td class="num">54</td><td class="num">3</td>
+    <td class="num">9.32%</td></tr>
+  </tbody></table>
+  <div class="foot">口径：曝光 / 阅读 / 封面点击率 / 涨粉 / 人均观看均来自创作者后台「内容分析」导出；互动率 =（赞+评+藏+享）÷ 阅读。分类依据标题语义与同系列一致性判定（后台不提供正文与话题）。<br>数据更新时间：2026-11-02</div>
+</div>
+
+  
 </div>
 <div id="tab-growth" class="tab-panel">
 <div class="section growth">
