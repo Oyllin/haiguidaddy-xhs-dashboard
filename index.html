@@ -136,6 +136,19 @@ tbody tr:hover { background: #fafcff; }
 #tab-oct .mbar { display:block; height:6px; background:#eef1f6; border-radius:3px; overflow:hidden; }
 #tab-oct .mfill { display:block; height:100%; background:linear-gradient(90deg,#1677FF,#69b1ff); border-radius:3px; }
 #tab-oct .foot { color:#a0a4ad; font-size:11.5px; margin-top:8px; }
+/* 三平台并排 */
+#tab-oct .pg3 { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:12px 0 6px; }
+#tab-oct .pg3 .p { border:1px solid #e8eef7; border-radius:12px; padding:14px 18px 16px; background:#fff; }
+#tab-oct .pg3 .p .pt { font-size:15px; font-weight:700; color:#0F172A; display:flex; align-items:center; gap:8px; margin-bottom:6px; }
+#tab-oct .pg3 .p .tag { font-size:11px; padding:2px 9px; border-radius:10px; font-weight:600; }
+#tab-oct .pg3 .p .row { display:flex; justify-content:space-between; align-items:baseline; padding:7px 0; border-bottom:1px dashed #f0f3f8; font-size:12.5px; }
+#tab-oct .pg3 .p .row:last-of-type { border-bottom:none; }
+#tab-oct .pg3 .p .lab { color:#8b93a1; }
+#tab-oct .pg3 .p .val { font-weight:700; color:#0F172A; font-size:16px; }
+#tab-oct .pg3 .p .dt { font-size:11.5px; font-weight:600; margin-left:5px; }
+#tab-oct .pg3 .p .jt { font-size:12.5px; color:#3d4451; background:#F7FAFF; border-radius:8px; padding:8px 10px; margin-top:10px; line-height:1.65; }
+#tab-oct .pg3 .p ul { margin:6px 0 0; padding-left:16px; font-size:12.5px; color:#3d4451; line-height:1.85; }
+@media (max-width:1100px) { #tab-oct .pg3 { grid-template-columns:1fr; } }
 @media (max-width:900px) { #tab-oct .two { grid-template-columns:1fr; } }
 </style></head><body><div class="wrap">
 <h1>海龟爸爸 · 小红书 2026年1–10月 笔记数据看板</h1>
@@ -5147,17 +5160,43 @@ tbody tr:hover { background: #fafcff; }
 </div>
 <div id="tab-oct" class="tab-panel">
 
-<div class="cards">
-  <div class="card"><div class="k">笔记数</div><div class="v">27</div><div class="d">图文 16 · 视频 11</div></div>
-  <div class="card"><div class="k">总曝光</div><div class="v">89,144</div><div class="d">篇均 3,302</div></div>
-  <div class="card"><div class="k">总阅读</div><div class="v">14,248</div><div class="d">篇均 528</div></div>
-  <div class="card"><div class="k">总互动</div><div class="v">826</div><div class="d">赞 496 · 评 137 · 藏 151 · 享 42</div></div>
-  <div class="card"><div class="k">互动率</div><div class="v">5.80%</div><div class="d">（赞+评+藏+享）÷ 阅读</div></div>
-  <div class="card"><div class="k">净增粉</div><div class="v">44</div><div class="d">内容直接贡献</div></div>
+
+<div class="section">
+  <h2>10 月三平台总览</h2>
+  <div class="pg3">
+    <div class="p">
+      <div class="pt">小红书 <span class="tag" style="background:#E8F1FF;color:#1677FF">分发塌了</span></div>
+      <div class="row"><span class="lab">发布笔记</span><span><span class="val">27</span><span class="dt" style="color:#8b93a1">篇 · 9月 24 篇</span></span></div>
+      <div class="row"><span class="lab">曝光</span><span><span class="val">89,144</span><span class="dt" style="color:#DC2626">-45%</span></span></div>
+      <div class="row"><span class="lab">阅读</span><span><span class="val">14,248</span><span class="dt" style="color:#DC2626">-14%</span></span></div>
+      <div class="row"><span class="lab">互动率</span><span><span class="val">5.80%</span><span class="dt" style="color:#DC2626">-2.8pt</span></span></div>
+      <div class="jt">产量没掉（27 篇，比 9 月还多 3 篇），但曝光 −45%、图文篇均阅读跌到 178。<b>问题在分发，不在产能。</b></div>
+    </div>
+    <div class="p">
+      <div class="pt">公众号 <span class="tag" style="background:#E6F7EF;color:#07A25B">少而精</span></div>
+      
+      <div class="row"><span class="lab">发文</span><span><span class="val">9</span><span class="dt" style="color:#DC2626">-44%</span></span></div>
+      <div class="row"><span class="lab">阅读人数</span><span><span class="val">4,225</span><span class="dt" style="color:#DC2626">-28%</span></span></div>
+      <div class="row"><span class="lab">净增关注</span><span><span class="val">928</span><span class="dt" style="color:#16A34A">+168%</span></span></div>
+      <div class="row"><span class="lab">分享人数</span><span><span class="val">244</span><span class="dt" style="color:#DC2626">-32%</span></span></div>
+      <div class="jt">少发 7 篇、阅读 −28%，但净增关注翻了 2.7 倍（取关从 975 掉到 667）。<b>问题在产量，不在内容。</b></div>
+    </div>
+    <div class="p">
+      <div class="pt">视频号 <span class="tag" style="background:#FFF3E6;color:#D97706">供给不足</span></div>
+      
+      <div class="row"><span class="lab">原创内容</span><span><span class="val">9</span><span class="dt" style="color:#DC2626">-18%</span></span></div>
+      <div class="row"><span class="lab">播放</span><span><span class="val">4,871</span><span class="dt" style="color:#DC2626">-81%</span></span></div>
+      <div class="row"><span class="lab">完播率</span><span><span class="val">9.5%</span><span class="dt" style="color:#16A34A">+5.0pt</span></span></div>
+      <div class="row"><span class="lab">净增关注</span><span><span class="val">33</span><span class="dt" style="color:#DC2626">-27%</span></span></div>
+      <div class="jt">后台 34 条里 25 条是投放素材，真内容只有 9 条。<b>问题在内容供给，不在选题。</b></div>
+    </div>
+  </div>
+  <div class="find">三个平台在 10 月同时下滑，但<b>病因完全不同</b>：小红书是流量分配变差（产量还涨了），公众号是主动减产（但用户沉淀更高效），视频号是内容产量不足（靠投放素材充数）。11 月不能用一套打法，得分开治。</div>
+  <div class="foot">口径：小红书「阅读」＝后台观看量、互动率＝（赞+评+藏+享）÷ 阅读；公众号「阅读人数」＝内容分析全账号阅读 UV，净增关注取「用户增长」；视频号已剔除信息流投放素材，只统计原创内容。三平台渠道独立，<b>不做加总</b>。</div>
 </div>
 
 <div class="section">
-  <h2>一、和 9 月比：产能持平，曝光下滑</h2>
+  <h2>一、小红书：和 9 月比，产能持平但曝光下滑</h2>
   <table><thead><tr><th>指标</th><th class="num">9 月</th><th class="num">10 月</th><th class="num">变化</th><th>判断</th></tr></thead><tbody>
     <tr><td>笔记数</td><td class="num">24</td><td class="num">27</td><td class="num">+3</td><td>产能没掉，日更稳定在 0.87 篇/天</td></tr>
     <tr><td>总曝光</td><td class="num">161,641</td><td class="num">89,144</td><td class="num">-44.9%</td><td><b>最大问题</b>：曝光掉了三成半</td></tr>
@@ -5424,7 +5463,7 @@ tbody tr:hover { background: #fafcff; }
 </div>
 
 <div class="section">
-  <h2>七、附：公众号 10 月运营数据（Hipapa 海龟爸爸 · 服务号）</h2>
+  <h2>七、公众号：少发一半，粉丝反而涨得更快</h2>
   <div class="find">公众号与小红书是两条完全独立的渠道，<b>不做数据加总</b>，只单独看自己的趋势。数据取自微信公众平台「内容分析 / 用户分析」，统计区间 2026-10-01 至 10-31。</div>
 
   <div class="cards">
@@ -5451,7 +5490,7 @@ tbody tr:hover { background: #fafcff; }
 
 
 <div class="section">
-  <h2>八、附：视频号 10 月运营数据（已剔除信息流投放素材）</h2>
+  <h2>八、视频号：内容供给不足，靠投放素材充数</h2>
   <div class="find">视频号后台 10 月共 34 条作品，其中 <b>25 条是信息流投放素材</b>——同一天内成批发布、文案高度同质（「小蓝瓶·无酸/控油/闭口」句式）、完播率仅 1.9%，属于投流物料而非内容运营。本节只统计<b>剔除后的 9 条内容视频</b>，投放素材单列在最后一行备查。</div>
 
   <div class="cards">
@@ -5479,6 +5518,37 @@ tbody tr:hover { background: #fafcff; }
   <div class="foot">口径：数据取自视频号助手「数据中心 → 视频数据」与作品列表（userpageType=11），播放＝作品累计播放量，完播率＝完整播放占比均值；净增关注来自「关注者数据」按自然日累加。<br>信息流素材判定：同一天内连续发布 ≥3 条、相邻间隔 ≤30 分钟，且文案为同质产品卖点句式（判定结果已逐条人工核对）。<br>数据更新时间：2026-11-04</div>
 </div>
 
+
+<div class="section">
+  <h2>九、11 月三平台目标</h2>
+  <div class="find">三个平台的问题不同，目标也不能混着定。下面每个数都是月底可以直接验收的——用同一套后台口径再对一次即可。</div>
+  <div class="pg3">
+    <div class="p">
+      <div class="pt">小红书 <span class="tag" style="background:#E8F1FF;color:#1677FF">补分发</span></div>
+      <div class="row"><span class="lab">曝光</span><span><span class="val">89,144</span><span class="dt" style="color:#8b93a1">→ 13 万</span></span></div>
+      <div class="row"><span class="lab">篇均阅读</span><span><span class="val">528</span><span class="dt" style="color:#8b93a1">→ 650</span></span></div>
+      <div class="row"><span class="lab">互动率</span><span><span class="val">5.80%</span><span class="dt" style="color:#8b93a1">→ 6.5%</span></span></div>
+      <div class="jt"><b>主线：</b>产品/达人线 9–10 篇做双 11 主力，科研线全部视频化，活动向内容压到 30% 以内。</div>
+    </div>
+    <div class="p">
+      <div class="pt">公众号 <span class="tag" style="background:#E6F7EF;color:#07A25B">补产量</span></div>
+      
+      <div class="row"><span class="lab">发文</span><span><span class="val">9 篇</span><span class="dt" style="color:#8b93a1">→ 12–14 篇</span></span></div>
+      <div class="row"><span class="lab">净增关注</span><span><span class="val">928</span><span class="dt" style="color:#8b93a1">→ 800+</span></span></div>
+      <div class="row"><span class="lab">篇均阅读</span><span><span class="val">364</span><span class="dt" style="color:#8b93a1">→ 350+</span></span></div>
+      <div class="jt"><b>主线：</b>复制「医生义诊 + 明确利益点」这个已验证结构，保持每周 2–3 更，别再一次群发 3 条同主题。</div>
+    </div>
+    <div class="p">
+      <div class="pt">视频号 <span class="tag" style="background:#FFF3E6;color:#D97706">补原创</span></div>
+      
+      <div class="row"><span class="lab">原创内容</span><span><span class="val">9 条</span><span class="dt" style="color:#8b93a1">→ 12–15 条</span></span></div>
+      <div class="row"><span class="lab">完播率</span><span><span class="val">9.5%</span><span class="dt" style="color:#8b93a1">→ 保持 8%+</span></span></div>
+      <div class="row"><span class="lab">中位播放</span><span><span class="val">548</span><span class="dt" style="color:#8b93a1">→ 500+</span></span></div>
+      <div class="jt"><b>主线：</b>把「共创官 Vlog / 实验室探访 / 巡游车现场」做成固定栏目，福利类内容控制在 1/3 以内。</div>
+    </div>
+  </div>
+  <div class="warn">三平台共同的坑：<b>别再靠福利和投放充数。</b>视频号的投放素材篇均 557 播放、完播 1.9%；小红书的倒计时篇也在拉低单篇分发。这些数字好看一时，但不会沉淀成品牌资产。</div>
+</div>
   
 </div>
 <div id="tab-growth" class="tab-panel">
